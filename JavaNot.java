@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import javax.sound.midi.Soundbank;
 public class JavaNot{
     public static void main(String[] args) {
     Scanner inp= new Scanner (System.in)  ;
@@ -15,9 +17,13 @@ public class JavaNot{
     int sosyal= inp.nextInt();
     System.out.println("müzik notunu gir");
     int müzik= inp.nextInt();
-    
-    double sonuç= (mat+fizik+kimya +türkçe+sosyal+müzik)/6;
-    System.out.println("ortalamanız:   "+ sonuç);
+
+    double sonuc= (mat+fizik+kimya +türkçe+sosyal+müzik)/6;
+    boolean durum = sonuc>60;
+    String sonDurum =durum ? "gectiniz": "kaldınız";
+     
+    System.out.println("ortalamanız:   "+ sonuc);
+    System.out.println(sonDurum);
 
     }
 }
